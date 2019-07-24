@@ -12,16 +12,16 @@ public class Baloon extends Aircraft implements Flyable {
 
         if (weather == "SUN") {
             coordinates = new Coordinates(coordinates.getLongitude() + 2, coordinates.getLatitude(), coordinates.getHeight() + 4);
-            Avajlauncher.output.println("Lovely day to drift and drink champagne.");
+            AvajLauncher.output.println("Baloon#" + this.name + "(" + this.id +  "): Lovely day to drift and drink champagne.");
         } else if (weather == "RAIN") {
             coordinates = new Coordinates(coordinates.getLongitude(), coordinates.getLatitude(), coordinates.getHeight() - 5);
-            Avajlauncher.output.println("Way to spoil a romantic ballon ride. Thanks rain.");
+            AvajLauncher.output.println("Baloon#" + this.name + "(" + this.id +  "): Way to spoil a romantic ballon ride. Thanks rain.");
         } else if (weather == "FOG") {
             coordinates = new Coordinates(coordinates.getLongitude(), coordinates.getLatitude(), coordinates.getHeight() - 3);
-            Avajlauncher.output.println("Sitting in a basket and I can't see shit.");
+            AvajLauncher.output.println("Baloon#" + this.name + "(" + this.id +  "): Sitting in a basket and I can't see shit.");
         } else if (weather == "SNOW") {
             coordinates = new Coordinates(coordinates.getLongitude(), coordinates.getLatitude(), coordinates.getHeight() - 15);
-            Avajlauncher.output.println("Snoooow. Time to snuggle in this blacket I prudently brought along.");
+            AvajLauncher.output.println("Baloon#" + this.name + "(" + this.id +  "): Snoooow. Time to snuggle in this blacket I prudently brought along.");
         }
 
         if (coordinates.getHeight() == 0) {

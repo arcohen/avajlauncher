@@ -11,17 +11,17 @@ public class Helicopter extends Aircraft implements Flyable {
         String weather = weatherTower.getWeather(this.coordinates);
 
         if (weather == "SUN") {
-            coordinates = new Coordinates(coordinates.getLongitude() + 2, coordinates.getLatitude(), coordinates.getHeight() + 4);
-            Avajlauncher.output.println("Lovely day to drift and drink champagne.");
+            coordinates = new Coordinates(coordinates.getLongitude() + 10, coordinates.getLatitude(), coordinates.getHeight() + 2);
+            AvajLauncher.output.println("Helicopter#" + this.name + "(" + this.id +  "): Sun baby!.");
         } else if (weather == "RAIN") {
-            coordinates = new Coordinates(coordinates.getLongitude(), coordinates.getLatitude(), coordinates.getHeight() - 5);
-            Avajlauncher.output.println("Way to spoil a romantic ballon ride. Thanks rain.");
+            coordinates = new Coordinates(coordinates.getLongitude() + 5, coordinates.getLatitude(), coordinates.getHeight());
+            AvajLauncher.output.println("Helicopter#" + this.name + "(" + this.id +  "): Close the window.");
         } else if (weather == "FOG") {
-            coordinates = new Coordinates(coordinates.getLongitude(), coordinates.getLatitude(), coordinates.getHeight() - 3);
-            Avajlauncher.output.println("Sitting in a basket and I can't see shit.");
+            coordinates = new Coordinates(coordinates.getLongitude(), coordinates.getLatitude() + 1, coordinates.getHeight() - 3);
+            AvajLauncher.output.println("Helicopter#" + this.name + "(" + this.id +  "): Chilling in a helicopter in the fog.");
         } else if (weather == "SNOW") {
-            coordinates = new Coordinates(coordinates.getLongitude(), coordinates.getLatitude(), coordinates.getHeight() - 15);
-            Avajlauncher.output.println("Snoooow. Time to snuggle in this blacket I prudently brought along.");
+            coordinates = new Coordinates(coordinates.getLongitude(), coordinates.getLatitude(), coordinates.getHeight() - 12);
+            AvajLauncher.output.println("Helicopter#" + this.name + "(" + this.id +  "): Chilling in a helicopter in the snow.");
         }
 
         if (coordinates.getHeight() == 0) {

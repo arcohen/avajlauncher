@@ -12,16 +12,16 @@ public class JetPlane extends Aircraft implements Flyable {
 
         if (weather == "SUN") {
             coordinates = new Coordinates(coordinates.getLongitude(), coordinates.getLatitude() + 10, coordinates.getHeight() + 2);
-            Avajlauncher.output.println("Lovely day to drift and drink champagne.");
+            AvajLauncher.output.println("Jetplane#" + this.name + "(" + this.id +  "): Full speed ahead motherfckers.");
         } else if (weather == "RAIN") {
-            coordinates = new Coordinates(coordinates.getLongitude(), coordinates.getLatitude(), coordinates.getHeight() - 5);
-            Avajlauncher.output.println("Way to spoil a romantic ballon ride. Thanks rain.");
+            coordinates = new Coordinates(coordinates.getLongitude(), coordinates.getLatitude() + 5, coordinates.getHeight());
+            AvajLauncher.output.println("Jetplane#" + this.name + "(" + this.id +  "): Splitting raindrops with dees wings.");
         } else if (weather == "FOG") {
-            coordinates = new Coordinates(coordinates.getLongitude(), coordinates.getLatitude(), coordinates.getHeight() - 3);
-            Avajlauncher.output.println("Sitting in a basket and I can't see shit.");
+            coordinates = new Coordinates(coordinates.getLongitude(), coordinates.getLatitude() + 1, coordinates.getHeight() - 3);
+            AvajLauncher.output.println("Jetplane#" + this.name + "(" + this.id +  "):  Watch out for those mountains pilot.");
         } else if (weather == "SNOW") {
-            coordinates = new Coordinates(coordinates.getLongitude(), coordinates.getLatitude(), coordinates.getHeight() - 15);
-            Avajlauncher.output.println("Snoooow. Time to snuggle in this blacket I prudently brought along.");
+            coordinates = new Coordinates(coordinates.getLongitude(), coordinates.getLatitude(), coordinates.getHeight() - 7);
+            AvajLauncher.output.println("Jetplane#" + this.name + "(" + this.id +  "): Would be cool if we could land little bit snowy.");
         }
 
         if (coordinates.getHeight() == 0) {

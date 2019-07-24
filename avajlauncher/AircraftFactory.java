@@ -7,11 +7,11 @@ public class AircraftFactory {
         Coordinates coordinates = new Coordinates(longitude, latitude, height);
         
         switch (type) {
-            case "Baloon":
+            case "baloon":
                 return new Baloon(name, coordinates);
-            case "Jetplane":
+            case "jetplane":
                 return new JetPlane(name, coordinates);
-            case "Helicopter":
+            case "helicopter":
                 return new Helicopter(name, coordinates);
             default:
                 throw new CustomException("Invalid aircraft type");
